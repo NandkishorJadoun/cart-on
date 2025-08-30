@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import hero from "/hero.webp";
 
 function Home() {
   return (
     <>
-      <img src="#" alt="" />
+      <img src={hero} alt="" height={200} />
       <h2>Welcome to CartOn</h2>
       <p>
         This is a fake store which has items fetched through the fake store api.

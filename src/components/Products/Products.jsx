@@ -9,16 +9,19 @@ function Products() {
   if (error) return <p>A network error was encountered</p>;
 
   return (
-    <main>
-      {products.map((product) => (
-        <ProductCard
-          key={product.id}
-          cartItems={cartItems}
-          setCartItems={setCartItems}
-          {...product}
-        />
-      ))}
-    </main>
+    <>
+      <h2>Products</h2>
+      <div>
+        {products.map((product) => (
+          <ProductCard
+            key={product.id}
+            cartItems={cartItems}
+            setCartItems={setCartItems}
+            {...product}
+          />
+        ))}
+      </div>
+    </>
   );
 }
 

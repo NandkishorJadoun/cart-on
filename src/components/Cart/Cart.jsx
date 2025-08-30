@@ -6,14 +6,14 @@ function Cart() {
   const [cartItems, setCartItems] = useOutletContext();
 
   return (
-    <div>
-      <h1>Shopping bag</h1>
+    <>
+      <h2>Shopping bag</h2>
       {cartItems.length > 0 ? (
         <CartSummary cartItems={cartItems} setCartItems={setCartItems} />
       ) : (
         <EmptyCart />
       )}
-    </div>
+    </>
   );
 }
 
