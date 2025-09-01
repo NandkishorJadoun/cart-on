@@ -1,6 +1,9 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import styles from "./CartTotals.module.css"
 
 function CartTotals({ cartItems, setCartItems }) {
+  const navigate = useNavigate();
+
   const discount = 33;
   const subTotal =
     Math.round(
@@ -11,20 +14,25 @@ function CartTotals({ cartItems, setCartItems }) {
     Math.round(((subTotal * (100 - discount)) / 100) * 100) / 100;
 
   return (
-    <div>
+    <div className={styles.totals}>
       <h3>Order Summary</h3>
       <p>$ {totalPrice}</p>
       <div>
         <p>Subtotal</p>
-        <p>$ {subTotal}</p>
+        <p className={styles.number}>$ {subTotal}</p>
         <p>Discount</p>
-        <p>{discount}%</p>
+        <p className={styles.number}>{discount}%</p>
         <hr />
         <p>Total</p>
-        <p>$ {totalPrice}</p>
+        <p className={styles.number}>$ {totalPrice}</p>
       </div>
-      <button onClick={() => setCartItems([])}>
-        <Link to={"/checkout"}>Checkout</Link>
+      <button
+        onClick={() => {
+          setCartItems([]);
+          navigate("/checkout");
+        }}
+      >
+        Checkout
       </button>
     </div>
   );

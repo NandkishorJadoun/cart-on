@@ -1,4 +1,5 @@
 import { Plus, Minus, Trash } from "lucide-react";
+import styles from "./CartItem.module.css"
 
 function CartItem({
   cartItem,
@@ -9,11 +10,11 @@ function CartItem({
   const totalPrice = Math.round(cartItem.cart * cartItem.price * 100) / 100;
 
   return (
-    <div>
+    <div className={styles.item}>
       <p>{cartItem.title}</p>
       <div>
         <img src={cartItem.image} alt={cartItem.title} />
-        <div>
+        <div className={styles.quantity}>
           <button
             disabled={cartItem.cart <= 1}
             onClick={() => decreaseQuantity(cartItem.id)}
@@ -29,7 +30,7 @@ function CartItem({
             <Plus />
           </button>
         </div>
-        <p>{totalPrice}</p>
+        <p>$ {totalPrice}</p>
         <button onClick={() => removeItemHandler(cartItem.id)}>
           <Trash />
         </button>

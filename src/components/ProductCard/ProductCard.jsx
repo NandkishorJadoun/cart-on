@@ -1,3 +1,6 @@
+import styles from "./ProductCard.module.css";
+import { Star } from "lucide-react";
+
 function ProductCard({ cartItems, setCartItems, ...product }) {
   const addItemsInCart = (id) => {
     const itemExist = cartItems.find((cartItem) => cartItem.id === id);
@@ -16,15 +19,16 @@ function ProductCard({ cartItems, setCartItems, ...product }) {
   };
 
   return (
-    <div>
+    <div className={styles.card}>
       <p>{product.title}</p>
-      <img src={product.image} alt={product.title} height={200} />
+      <img className={styles.image} src={product.image} alt={product.title} />
       <div>
-        <p>{product.price}</p>
-        <p>{product.rating}</p>
+        <p>$ {product.price}</p>
+        <p className={styles.rating}>
+          {product.rating} <Star />{" "}
+        </p>
       </div>
       <button onClick={() => addItemsInCart(product.id)}>Add to Cart</button>
-      <hr />
     </div>
   );
 }

@@ -1,0 +1,32 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    border: solid 2px black;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.item>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item button {
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.item img {
+    height: 5rem;
+    width: 5rem;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: clamp(1.25rem, 1rem + 1vw, 1.5rem);
+}

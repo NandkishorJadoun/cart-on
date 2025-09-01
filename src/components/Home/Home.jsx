@@ -1,20 +1,22 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import hero from "/hero.webp";
+import styles from "./Home.module.css";
 
 function Home() {
+  const navigate = useNavigate();
   return (
-    <>
-      <img src={hero} alt="" height={200} />
-      <h2>Welcome to CartOn</h2>
-      <p>
-        This is a fake store which has items fetched through the fake store api.
-        This site isn't real. This is just a filler text for the landing page of
-        this project.
-      </p>
-      <button>
-        <Link to={"/products"}>START SHOPPING</Link>
-      </button>
-    </>
+    <div className={styles.container}>
+      <div>
+        <h2>Welcome to CartOn</h2>
+        <p>
+          This is a fake store which has items fetched through the fake store
+          api. This site isn't real. This is just a filler text for the landing
+          page of this project.
+        </p>
+        <button onClick={() => navigate("/products")}>START SHOPPING</button>
+      </div>
+      <img src={hero} alt="" width={640} />
+    </div>
   );
 }
 

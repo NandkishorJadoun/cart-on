@@ -1,0 +1,11 @@
+.checkout {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.checkout p{
+    text-wrap: balance;
+    text-align: center;
+}

@@ -1,0 +1,21 @@
+.container {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 5rem;
+}
+
+.container>div {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.container img {
+    justify-self: end;
+}
+
+.container button {
+    justify-self: start;
+}

@@ -1,6 +1,8 @@
+import styles from "./EmptyCart.module.css"
+
 function EmptyCart() {
   return (
-    <div>
+    <div className={styles.empty}>
       <h3>🛒 Your bag is empty!</h3>
       <p>
         Don't leave it hanging—add something you love and make it happy. Your

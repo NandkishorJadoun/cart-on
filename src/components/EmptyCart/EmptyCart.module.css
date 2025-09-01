@@ -1,0 +1,11 @@
+.empty{
+    text-align: center;
+    text-wrap: balance;
+    border: solid 2px black;
+    margin: 0 5rem;
+    padding: 1rem;
+}
+
+.empty h3{
+    margin-bottom: 0.5rem;
+}

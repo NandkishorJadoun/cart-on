@@ -1,0 +1,27 @@
+.card{
+    border: solid black 2px;
+    margin: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+    text-wrap: balance;
+}
+
+.card > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.image{
+    margin: 0 auto;
+    height: 250px;
+    width: 250px;
+}
+
+.rating{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
