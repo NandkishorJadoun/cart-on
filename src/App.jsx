@@ -17,16 +17,15 @@ function App() {
           <Link to={"/products"}>Products</Link>
           <Link to={"/cart"}>
             <Handbag />
+            {cartItems.length > 0 && <span>{cartItems.length}</span>}
           </Link>
         </nav>
       </header>
-      <hr />
       <main>
         <Outlet
           context={[cartItems, setCartItems, products, error, loading]}
         ></Outlet>
       </main>
-      <hr />
       <footer>Made with ❤️ by Nandkishor</footer>
     </>
   );
